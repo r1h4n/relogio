@@ -1,118 +1,99 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>meus objetivos do ano</title>
-</head>
-<body>   
-  <section class="conteudo-principal">
-        <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
-        <div class="conteudo">
-            <div class="botoes">
-                <button class="botao ativo">trocar de moto</button>
-                <button class="botao">terminar a escola</button>
-                <button class="botao">dar entrada na carteira de habilitação</button>
-                <button class="botao">começar a investir</button>
-             </div>
-            <div class="abas-textos">
-                <div class="aba-conteudo ativo">
-                    <h3 class="aba-conteudo-titulo-principal">trocar de moto</h3>
-                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                    <div class="contador">
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="dias0"></p>
-                            <p class="contador-digito-texto">dias</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="horas0"></p>
-                            <p class="contador-digito-texto">horas</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="min0"></p>
-                            <p class="contador-digito-texto">min</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="seg0"></p>
-                            <p class="contador-digito-texto">seg</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="aba-conteudo">
-                    <h3 class="aba-conteudo-titulo-principal">terminar a escola</h3>
-                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                    <div class="contador">
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="dias1"></p>
-                            <p class="contador-digito-texto">dias</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="horas1"></p>
-                            <p class="contador-digito-texto">horas</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="min1"></p>
-                            <p class="contador-digito-texto">min</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="seg1"></p>
-                            <p class="contador-digito-texto">seg</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="aba-conteudo">
-                    <h3 class="aba-conteudo-titulo-principal">dar entrada na carteira de habilitação</h3>
-                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                    <div class="contador">
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="dias2"></p>
-                            <p class="contador-digito-texto">dias</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="horas2"></p>
-                            <p class="contador-digito-texto">horas</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="min2"></p>
-                            <p class="contador-digito-texto">min</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="seg2"></p>
-                            <p class="contador-digito-texto">seg</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="aba-conteudo">
-                    <h3 class="aba-conteudo-titulo-principal">começar a investir</h3>
-                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                    <div class="contador">
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="dias3"></p>
-                            <p class="contador-digito-texto">dias</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="horas3"></p>
-                            <p class="contador-digito-texto">horas</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="min3"></p>
-                            <p class="contador-digito-texto">min</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="seg3"></p>
-                            <p class="contador-digito-texto">seg</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="main.js"></script>
-</body>
+const modalidades = ["Ginástica", "Judô", "Surfe", "Vôlei"];
 
-</html>
+//Com base na constante modalidade, 
+//Coloque o número que represente o esporte do seu grupo
+const escolha = 1 ;
+
+document.querySelector('body').style.backgroundImage = "url('img/"+modalidades[escolha]+".png')";
+document.querySelector('title').textContent = "Missão Olímpica | "+modalidades[escolha];
+document.querySelector('h1').innerHTML = "Missão Olímpica <br> "+modalidades[escolha];
+
+const caixaPrincipal = document.querySelector(".caixa-principal");
+const caixaPerguntas = document.querySelector(".caixa-perguntas");
+const caixaAlternativas = document.querySelector(".caixa-alternativas");
+const caixaResultado = document.querySelector(".caixa-resultado");
+const textoResultado = document.querySelector(".texto-resultado");
+
+let atual = 0;
+let perguntaAtual;
+let historiaFinal = "";
+let pontos = 0;
+//Assim como a variável atual (acima)
+//Crie uma variável com o nome pontos que inicie com 0
+
+
+function mostraPergunta(){
+    if(atual >= perguntas[escolha].length){
+        mostraResultado();
+        return;
+    }
+    perguntaAtual = perguntas[escolha][atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = "";
+    mostraAlternativas();
+}
+
+function mostraAlternativas(){
+    for(const alternativa of perguntaAtual.alternativas){
+        const botaoAlternativas = document.createElement("button");
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
+        caixaAlternativas.appendChild(botaoAlternativas)
+    }
+}
+
+function respostaSelecionada(opcaoSelecionada){
+    const afirmacao = opcaoSelecionada.afirmacao;
+    historiaFinal += afirmacao + " ";
+    atual++;
+    pontos += opcaoSelecionada.pontos;
+    console.log(pontos);
+    mostraPergunta();
+}
+
+function mostraResultado(){
+    textoResultado.textContent = historiaFinal;
+    caixaPerguntas.textContent = "Resultado";
+    caixaAlternativas.textContent = "";
+    podiumMedalhas();
+    
+}
+
+function podiumMedalhas() {
+    if (pontos === 3) {
+        caixaPrincipal.style.backgroundImage = "url('img/bronze.png')";
+        caixaPerguntas.textContent = "Resultado da competição: 3 pontos é BRONZE!";
+    } else if (pontos === 4) {
+        caixaPrincipal.style.backgroundImage = "url('img/prata.png')";
+        caixaPerguntas.textContent = "Resultado da competição: 4 pontos é PRATA!";
+    } else if (pontos === 5) {
+        caixaPrincipal.style.backgroundImage = "url('img/ouro.png')";
+        caixaPerguntas.textContent = "Resultado da competição: 5 pontos é OURO!";
+    } else {
+        caixaPrincipal.style.backgroundImage = "url('img/perdeu.png')";
+        caixaPerguntas.textContent = "Resultado da competição: PERDEU!";
+    }
+}
+
+mostraPergunta();
+
+//crie uma função podiumMedalhas
+//E verifique a quantidade de pontos
+//  - Se pontos igual a 3 ganha bronze, dentro dessa condicional:
+//    Utilize a linha de código abaixo para modificar o CSS e inserir uma medalha
+//   background-image:"url('img/bronze.png')";
+//    altere o textContent do caixaPerguntas para "Resultado da competição: 3 pontos é BRONZE!"
+//  - Se pontos igual a 4 ganha prata
+//    Utilize a linha de código abaixo para modificar o CSS e inserir uma medalha
+//    caixaPrincipal.style.backgroundImage = "url('img/prata.png')";
+//    altere o textContent do caixaPerguntas para "Resultado da competição: 4 pontos é PRATA!"
+//  - Se pontos igual a 5 ganha ouro
+//    Utilize a linha de código abaixo para modificar o CSS e inserir uma medalha
+//    caixaPrincipal.style.backgroundImage = "url('img/ouro.png')";
+//    altere o textContent do caixaPerguntas para "Resultado da competição: 5 pontos é OURO!"
+//  - Se pontos menor que 3
+//    Utilize a linha de código abaixo para modificar o CSS e inserir uma medalha
+//    caixaPrincipal.style.backgroundImage = "url('img/perdeu.png')";
+//    altere o textContent do caixaPerguntas para "Resultado da competição: PERDEU!";
+//2 Dentro de cada SE altere o conteúdo de texto de caixaPerguntas exemplo
+//     Quando ouro coloque "Resultado da competição: 3 pontos é BRONZE!";
